@@ -2,11 +2,15 @@ import axios from 'axios';
 
 // const url = 'http://localhost:5000/posts';
 
-const url = 'http://localhost:8080/getAllEvents';
+const url = 'http://localhost:8080';
 
-export const retrieveEvents = () => axios.get(url);
+const url1 = 'http://localhost:8080/getAllEvents';
 
-export const createEvent = (newEvent) => axios.post(url, newEvent);
+export const retrieveEvents = () => axios.get(url1);
+
+const url2 = 'http://localhost:8080/insertEvent';
+
+export const createEvent = (newEvent) => axios.post(url2, newEvent);
 
 export const updateEvent = (id, updated_Event) => axios.patch(`${url}/${id}`, updated_Event); // updated_Event = event data
 
